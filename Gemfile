@@ -52,6 +52,7 @@ group :production do
 end
 
 gem "sprockets_better_errors"
+gem 'heroku-bouncer'
 
 group :development do
   gem 'pry'

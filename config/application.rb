@@ -22,5 +22,8 @@ module HerokuDevcenterwatch
     
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/lib)
+
+    config.middleware.use ::Heroku::Bouncer,
+        oauth: { id: ENV['HEROKU_OAUTH_ID'], secret: ENV['HEROKU_OAUTH_SECRET'] }, secret: ENV['HEROKU_BOUNCER_SECRET']
   end
 end
