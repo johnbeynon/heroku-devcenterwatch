@@ -1,5 +1,8 @@
 class Article < ActiveRecord::Base
+
   has_many :contents
+  has_many :subscriptions
+
   before_create :load_article
 
   validates_uniqueness_of :url
