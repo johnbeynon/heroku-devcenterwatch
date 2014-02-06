@@ -9,6 +9,7 @@ class ArticleWatcher
         puts "Article - #{article.title} was updated"
         Notifications.process(article)
       end
+      puts "Article - #{article.title} not updated"
     end
   end
 end
